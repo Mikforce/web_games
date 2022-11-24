@@ -51,3 +51,9 @@ h3 {
   margin: 0 30px;
 
 }
+canvas {
+  justify-content: center;
+  border: 1px solid white;
+  display: inline-block;
+  flex-wrap: wrap;
+}
