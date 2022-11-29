@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #000000;
+    
+}
+  /*Задаём глобальные параметры*/
+.snake {
+    --color1: rgb(26, 25, 39);
+    background-color: #A9D8CF;
+    opacity: 0.8;
+    background-image:  linear-gradient(var(--color1) 1px, transparent 1px), linear-gradient(to right, var(--color1) 1px, #A9D8CF 1px);
+    background-size: 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid black;
+}
+/*Делаем границу вокруг игрового поля*/
+canvas {
+    border: 1px solid white;
+}
+  
