@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-/* basics */
 body {
-  /* overflow:hidden; */
   background-image: url(../css/vintage-grunge-paper-background.jpg);
   padding: 0 10%;
   font-family: 'Pacifico', cursive;
