@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-
 /* basics */
 body {
-    /* overflow:hidden; */
-
-    background-image: url(../css/vintage-grunge-paper-background.jpg);
-    padding: 0 10%;
-    font-family: 'Pacifico', cursive;
-
+  /* overflow:hidden; */
+  background-image: url(../css/vintage-grunge-paper-background.jpg);
+  padding: 0 10%;
+  font-family: 'Pacifico', cursive;
 }
 
 h1 {
-   display: flex;
-   font-size: 70px;
-   padding: 70px;
-   margin: 30px;
-   align-items: center;
-   justify-content: center;
+  display: flex;
+  font-size: 70px;
+  padding: 70px;
+  margin: 30px;
+  align-items: center;
+  justify-content: center;
 }
+
 h2 {
   display: flex;
   font-size: 25px;
@@ -27,6 +25,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
 h3 {
   display: flex;
   font-size: 15px;
@@ -44,29 +43,24 @@ h3 {
 }
 
 .col {
-
   height: 500px;
   width: 500px;
-  /* border: 1px solid black; */
   display: inline-block;
   flex-wrap: wrap;
   text-transform: uppercase;
   margin: 0 30px;
-
 }
+
 canvas {
   justify-content: center;
   border: 1px solid white;
   display: inline-block;
   flex-wrap: wrap;
-/* }
-
-/*Задаём глобальные параметры*/
-/* .snake { */ 
+  /* змейка */
   --color1: rgb(26, 25, 39);
   background-color: #A9D8CF;
   opacity: 0.8;
-  background-image:  linear-gradient(var(--color1) 1px, transparent 1px), linear-gradient(to right, var(--color1) 1px, #A9D8CF 1px);
+  background-image: linear-gradient(var(--color1) 1px, transparent 1px), linear-gradient(to right, var(--color1) 1px, #A9D8CF 1px);
   background-size: 40px 40px;
   display: flex;
   align-items: center;
