@@ -1,3 +1,6 @@
+
+
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 };
@@ -12,10 +15,10 @@ var count = 0;
 var snake = {
     x: 160,
     y: 160,
-    
+
     dx: grid,
     dy: 0,
-    
+
     cells: [],
     maxCells: 4
 };
@@ -52,16 +55,16 @@ function loop() {
     else if (snake.y >= canvas.height) {
         snake.y = 0;
     }
-    
+
     snake.cells.unshift({ x: snake.x, y: snake.y });
     if (snake.cells.length > snake.maxCells) {
         snake.cells.pop();
     }
-    
+
     context.fillStyle = 'red';
     context.fillRect(apple.x, apple.y, grid - 1, grid - 1);
 
-    
+
     context.fillStyle = `rgb(22, 170, 0)`;
     snake.cells.forEach(function (cell, index) {
         context.fillStyle = `rgb(24, ${Math.floor(210 - 10*index)}, 0)`;
@@ -73,14 +76,14 @@ function loop() {
           }
         for (var i = index + 1; i < snake.cells.length; i++) {
             if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
-            
+
             snake.x = 160;
             snake.y = 160;
             snake.cells = [];
             snake.maxCells = 4;
             snake.dx = grid;
             snake.dy = 0;
-           
+
             apple.x = getRandomInt(0, gridsize) * grid;
             apple.y = getRandomInt(0, gridsize) * grid;
             }
@@ -89,6 +92,7 @@ function loop() {
 };
 
 document.addEventListener('keydown', function (e) {
+
     // Стрелка влево
     if (e.which === 37 && snake.dx === 0) {
       snake.dx = -grid;
@@ -112,4 +116,14 @@ document.addEventListener('keydown', function (e) {
 });
 
 
+
 requestAnimationFrame(loop);
+
+var arrow_keys_handler = function(e) {
+    switch(e.keyCode){
+        case 37: case 39: case 38:  case 40: // Arrow keys
+        case 32: e.preventDefault(); break; // Space
+        default: break; // do not block other keys
+    }
+};
+window.addEventListener("keydown", arrow_keys_handler, false);
