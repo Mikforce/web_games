@@ -8,6 +8,7 @@ var context = canvas.getContext('2d');
 var grid = 40;
 var gridsize = canvas.width / grid;
 var count = 0;
+let score = 0;
 
 var snake = {
   x: 160,
@@ -18,13 +19,13 @@ var snake = {
 
   cells: [],
   maxCells: 4
+
 };
 
 var apple = {
   x: 320,
   y: 320
 };
-
 
 
 function loop() {
@@ -59,18 +60,29 @@ function loop() {
     snake.cells.pop();
   }
 
-  context.fillStyle = 'red';
+  context.fillStyle = '#211908';
   context.fillRect(apple.x, apple.y, grid - 1, grid - 1);
+  context.fillStyle = "black"
+  context.font = "50px Arial";
+  context.fillText(snake.maxCells - 4, grid * 10, grid * 1);
 
 
-  context.fillStyle = `rgb(22, 170, 0)`;
+  context.fillStyle = `#c9701c`;
   snake.cells.forEach(function(cell, index) {
     context.fillStyle = `rgb(24, ${Math.floor(210 - 10*index)}, 0)`;
     context.fillRect(cell.x, cell.y, grid - 1, grid - 1);
     if (cell.x === apple.x && cell.y === apple.y) {
       snake.maxCells++;
+      if (snake.maxCells > 13){
+        setTimeout(function(){
+  window.location.href = 'qest.html';
+}, 1 * 1000);
+      }
+
+
       apple.x = getRandomInt(0, gridsize) * grid;
       apple.y = getRandomInt(0, gridsize) * grid;
+
     }
     for (var i = index + 1; i < snake.cells.length; i++) {
       if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
@@ -84,6 +96,11 @@ function loop() {
 
         apple.x = getRandomInt(0, gridsize) * grid;
         apple.y = getRandomInt(0, gridsize) * grid;
+
+
+
+
+
       }
     }
   });
@@ -112,6 +129,10 @@ document.addEventListener('keydown', function(e) {
     snake.dx = 0;
   }
 });
+
+
+
+
 
 
 

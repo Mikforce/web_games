@@ -56,9 +56,9 @@ canvas {
   flex-wrap: wrap;
   /* змейка */
   --color1: rgb(26, 25, 39);
-  background-color: #A9D8CF;
+  background-color: #7aba70;
   opacity: 0.8;
-  background-image: linear-gradient(var(--color1) 1px, transparent 1px), linear-gradient(to right, var(--color1) 1px, #A9D8CF 1px);
+  background-image: linear-gradient(var(--color1) 1px, transparent 1px), linear-gradient(to right, var(--color1) 1px, #9e8657 1px);
   background-size: 40px 40px;
   display: flex;
   align-items: center;
