@@ -1,53 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
+
   background-image: url(../css/vintage-grunge-paper-background.jpg);
   padding: 0 10%;
   font-family: 'Pacifico', cursive;
+
 }
+
 
 h1 {
   display: flex;
   font-size: 70px;
   padding: 70px;
   margin: 30px;
-  align-items: center;
-  justify-content: center;
+
 }
 
-h2 {
-  display: flex;
-  font-size: 25px;
-  padding: 10px;
-  margin: 10px;
-  align-items: center;
-  justify-content: center;
-}
 
-h3 {
-  display: flex;
-  font-size: 15px;
-  padding: 10px;
-  margin: 10px;
-  align-items: center;
-  justify-content: center;
-}
 
-.row {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 100px 0 70px;
-}
 
-.col {
-  height: 500px;
-  width: 500px;
-  display: inline-block;
-  flex-wrap: wrap;
-  text-transform: uppercase;
-  margin: 0 30px;
-}
 
 canvas {
   justify-content: center;
