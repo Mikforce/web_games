@@ -5,16 +5,18 @@ body {
   background-image: url(../css/vintage-grunge-paper-background.jpg);
   padding: 0 10%;
   font-family: 'Pacifico', cursive;
+  justify-items: center;
 
 }
-
+.col { flex: 1 0 50%;
+}
 
 h1 {
   display: flex;
   font-size: 70px;
   padding: 70px;
   margin: 30px;
-
+  justify-items: stretch;
 }
 
 
